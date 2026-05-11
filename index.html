@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>EdTechWasteMgt</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<p><img width="120" align="right" src="https://www.scu.edu/media/school-of-engineering/pdfs/graphics/2024-Engineering-Logo-HD-360x154.png"></p>
+
+<h1 id="toc_0">Emerging Technology Support for Sustainability/Waste Management Learning</h1>
+
+<ol>
+<li><a href="#problems">Problems &amp; Research Issues &amp; Research Objectives</a></li>
+<li><a href="#era">Educational Recycling Assistance (ERA)</a>
+
+<ul>
+<li><a href="#waste-detector">Waste Detector</a></li>
+<li><a href="#sustainability">Sustainability Awareness technology</a></li>
+<li><a href="#ar">Augmented Reality Feedback Delivery</a></li>
+</ul></li>
+<li><a href="#WasteDatasetEng">Waste Dataset Engineering</a>
+
+<ul>
+<li><a href="#augmentation">Image Augmentation &amp; Segmentation</a></li>
+<li><a href="#generativeai">Generative AI models to supply longtailed samples</a> </li>
+</ul></li>
+<li><a href="#tpb">TPB-based EdTech for Waste Management Learning</a></li>
+<li><a href="#webapp">Waste Genie: Web Application for Smart Waste Management</a>
+
+<ul>
+<li><a href="#logo">Waste Genie Logos</a></li>
+<li><a href="#game">Gamification in informal learning</a></li>
+</ul></li>
+<li><a href="#AI">Sustainability content generation</a></li>
+<li><a href="#myecopal">MyEcoPal: Bridging sustainability knowledge and behavior</a> <img src="img/new.gif" width="30"></li>
+<li><a href="#contacts">Contact</a></li>
+</ol>
+
+<h3 id="toc_1"><a name="problems"></a>Problems</h3>
+
+<div><pre><code class="language-none">* Existing information/knowledge is distributed, scattered and simply not enough.
+* Daily waste is often messy.
+* Every county, state, country, has slightly different recycling regulation.
+* Waste is only the tip of the iceberg of environmental sustainability issue.
+* Sustainability is complex, involving social, economics, and environmental dimensions. 
+* Knowing is one thing, doing is another. </code></pre></div>
+
+<h3 id="toc_2"><a name="researchissues"></a>Research issues</h3>
+
+<div><pre><code class="language-none">1. Limited and biased waste datasets. 
+    * Traditional image augmentation and segmentation may have limits, requires innovative methods to improve imbalance training set.
+2. Limited theoretical grounded learning tools in this domain.
+    * Fast changing pace in waste management.
+    * Informal learning of complex social problems (location, resource, regulation).
+    * Insufficiency of waste management knowledge.
+        - How to learn &amp; re-learn?
+        - How to build sustainable behaviors?
+        - How to transform sustainablity awareness to contribution?
+3. Challenges in visualizing and contextualizing carbon consumption &amp; emission.
+    * Invisible, long-term consequential effect.
+    * EPA’s Carbon footprint calculator focuses on lump sum and metrics centered events, such as commute, transportation, household, etc. but consumer-based sustainable behavioral based carbon emission conversions.
+    * Embedded carbon is hard to capture or to visualize. 
+4. Challenges in finding, receiving, subscribing updated information, resources, and eco-tips.
+    * How can modern AI (LLM, ChatGPT, Generative AI...) help in addressing this challenge?
+5. How do we bridge understanding (knowing) to actually doing (performing) sustainable actions?  
+</code></pre></div>
+
+<h3 id="toc_3"><a name="objectives"></a>Research Objectives</h3>
+
+<div><pre><code class="language-none">* Help people navigate the complex waste management field.
+* Provide emerging technologies to facilitate (lifelong, informal, sustainable) learning.
+* Support sustainable practices and healthy behaviors.
+* Raise sustainability awareness.</code></pre></div>
+
+<h2 id="toc_4"><a name="era"></a>Educational Recycling Assistance (ERA) - preliminary design &amp; studies</h2>
+
+<h3 id="toc_5"><a name="waste-detector"></a>Waste Detector</h3>
+
+<p>Several datasets are adopted to train the object detection model, including <strong>TrashNet</strong>, <strong>Open Image Dataset</strong> (OIDv6, for straw &amp; plastic bags), <strong>TACO</strong>, and our self-built dataset (for paper and plastic objects). Additional cleaning and processing were implemented to unify the format of annotations, which resulted in 4,835 distinct images with corresponding labels. We also randomly selected some of the images for augmentation and generated 8,596 samples in our dataset. The model was trained under the <strong>EfficientDet</strong> and then converted to a tflite model for real-time object detection in the mobile platform. </p>
+
+<p><a href="#WasteDatasetEng">Datasets and model engineering</a> lead to another research question documented in the later section. </p>
+
+<p><img src="img/1stERAhome.png" width=200>
+<img src="img/wastescanner.png" width=200>
+<img src="img/wastesearch.png" width=200></p>
+
+<h2 id="toc_6"><a name="sustainability"></a>Sustainability Awareness Technology</h2>
+
+<h3 id="toc_7">Carbon Emission Calculator</h3>
+
+<p>While there ares everal existing published carbon calculators to help compute the equivalent amount of carbon dioxide (CO<sub>2</sub>) emissions, many of them are bundled with household or travel with a variety of input and configurations. i.e. https://www.carbonfootprint.com/calculator.aspx</p>
+
+<p>Our solution utilizes the <a href="#waste-detector">waste detection</a> to mimic and  simplify the abstract measurements of the amount of waste to trash and projecting an estimation of the carbon emissions. Associating the detected waste to the carbon emissions calculation avoids tedious steps of manual input and permits persistent carbon emission tracing.</p>
+
+<h3 id="toc_8">Carbon Footprint Tracer and Visualization</h3>
+
+<h4 id="toc_9">Sustainable behavioral based carbon emission tracking</h4>
+
+<h4 id="toc_10">Social visualization</h4>
+
+<p><img src="img/carbonsaved1.png" width=200>  <img src="img/carbonsaved2.png" width=218></p>
+
+<h2 id="toc_11"><a name="ar"></a>Augmented Reality Feedback Delivery</h2>
+
+<p>In addition to the instant feedback of the detected waste &amp; appropriate bin to dispose, we explore the immersive technology - AR to extend the information space. It provides more engaging interactions and three-dimensional space to display potential recommended information. </p>
+
+<p><img src="img/ARFeedback.jpg" width=200> <img src="img/ARrecommendation.png" width=190></p>
+
+<h2 id="toc_12">Learning Opportunity</h2>
+
+<h3 id="toc_13">Learning Tips</h3>
+
+<h3 id="toc_14">Feedback</h3>
+
+<h3 id="toc_15">Recommendation</h3>
+
+<p>Forthcoming...</p>
+
+<p><img src="img/ERAv2Home.png" width=200></p>
+
+<h3 id="toc_16"><span style="color:blue">Lesson Learned</span></h3>
+
+<blockquote>
+<p><span style="color:blue">We recognize the importance of <em>learning</em> content and the challenges to involve users in using the application, a more streamlined UI has to be designed to compliment and maximize all the wonderful sustainability techs that we have built. </span></p>
+</blockquote>
+
+<h3 id="toc_17">Publication</h3>
+
+<p><em>Sun., Q., Hsiao., I-H. &amp; Chien., S-Y. (2023) <a href="https://doi.org/10.1007/978-3-031-47328-9_34" target="_blank">Immersive Educational Recycling Assistant (ERA): Learning Waste Sorting in Augmented Reality</a>, IEEE, the 9th International Conference of the Immersive Learning Research Network.</em></p>
+
+<p><em>Sun, Q., Hsiao, I. H., &amp; Chien, S. Y. (2023, July). <a href="https://doi.org/10.1007/978-3-031-36001-5_66" target="_blank">Immersive Educational Technology for Waste Management Learning: A Study of Waste Detection and Feedback Delivery in Augmented Reality.</a> In International Conference on Human-Computer Interaction (pp. 509-515). Cham: Springer Nature Switzerland.</em></p>
+
+<h2 id="toc_18"><a name="WasteDatasetEng"></a>Practical Solution to Engineer <em>balanced</em> Waste Dataset</h2>
+
+<h3 id="toc_19">Why are the existing datasets not enough?</h3>
+
+<blockquote>
+<p>Internet crawled images can be noisy. (i.e. an image labeled as straw often is not just a straw, it usually comes with a cup, a hand and a place, etc.)</p>
+
+<p>Small objects can be hard to train. </p>
+</blockquote>
+
+<p>In our previously deployed model (assembled upon open data sets, and some additions from our efforts), there is a total 55043 images, 24 categories.</p>
+
+<p><img src="img/longtail.png" width=350> </p>
+
+<p><details>
+    <summary><b>Approaches to address imbalanced data</b></summary>
+    ### Approaches to address imbalanced data </p>
+
+<h4 id="toc_20">Data Expansion 1: <a name="augmentation"></a>augmentation + segmentation</h4>
+
+<ol>
+<li>Include more samples from OIDv7 (1), process images with detection bounding boxes</li>
+<li>Blur out the area outside the target bounding box (2) / or simply cut the box off the image (3)</li>
+<li>Use the generated single-object images for training</li>
+</ol>
+
+<p><img src="img/image_augmentation.png" width=400> 
+<img src="img/dataexpansion1.png" width=400> </p>
+
+<p>There are still problems...</p>
+
+<blockquote>
+<ul>
+<li>Cropping, blurring...It doesn’t guarantee imbalance data set issue. (underrepresented categories).</li>
+<li>Ensemble methods (AdaBoost, SMOTE) to learn from misclassification and reduce bias or to generate minority classes to rebalance the dataset.
+These models may be sensitive to noise and outliers. </li>
+</ul>
+</blockquote>
+
+<h4 id="toc_21">Data Expansion 2: <a name="generativeai"></a>Generative AI models to supply longtailed samples</h4>
+
+<p><img src="img/dataset-stat.png" width=350> </p>
+
+<p>Detail forthcoming...</p>
+
+<p></details></p>
+
+<h3 id="toc_22">Results</h3>
+
+<ul>
+<li>AI-boosted image categories had higher entropy. </li>
+<li>AI-infused images improved the image diversity. </li>
+<li>Generative-AI is more prominent in improving model accuracy with biased or imbalanced datasets.</li>
+<li>Cost-efficiency of the boosted data and model accurancy can be achieved. </li>
+</ul>
+
+<p><img src="img/entropy.png" width=280> <img src="img/cost-efficiency.png" width=350> </p>
+
+<h3 id="toc_23"><span style="color:blue">Lesson Learned</span></h3>
+
+<p><details>
+    <summary><b>Existing Open Datasets</b></summary></p>
+
+<h4 id="toc_24">Existing Open Datasets</h4>
+
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Images &amp; Annotations</th>
+<th>Citation &amp; Source</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>TACO</td>
+<td>waste in the wild with 1,500 images and 4,700 annotations</td>
+<td>P. F. Proenc ̧a and P. Simo ̃es, “Taco: Trash annotations in context for litter detection,” arXiv preprint arXiv:2003.06975, 2020.</td>
+</tr>
+<tr>
+<td>TrashCan</td>
+<td>7,212 annotated images of undersea wastes</td>
+<td>J. Hong, M. Fulton, and J. Sattar, “Trashcan: A semantically-segmented dataset towards visual detection of marine debris,” arXiv preprint arXiv:2007.08097, 2020.</td>
+</tr>
+<tr>
+<td>TrashICRA19</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MJU-Waste</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TrashNet</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="toc_25"><span style=color:purple>Note: none of these data sets are annotated with the <em>right</em> bin information. It circles back to the foundamental problem of waste management, sorting waste is challenging (it varies by location and by organization); therefore, adaptive <em>corrective</em> feedback is desired.</span></h5>
+
+<p></details></p>
+
+<h3 id="toc_26">Publication</h3>
+
+<p><em>Sun., Q. &amp; Hsiao., I-H. (2023) Effective Use of generative AI for Environmental Sustainability: A study of combating small and imbalanced datasets in engineering waste classification models (submitted)</em></p>
+
+<h2 id="toc_27"><a name="tpb"></a>Theory of Planned Behavior Modeled EdTech in Waste Management Learning</h2>
+
+<p>We applied Theory of Planned Behavior (TPB) to model the users’ behavior intention in waste management. The underlying assumption is that we all want to practice sustainable behaviors for a better tomorrow (i.e. proper waste sorting; recycle; reduce trash; etc.), but there is a gap between intention and actual behavior. </p>
+
+<p><img src="img/tpb.png" width=400> </p>
+
+<h3 id="toc_28">Results</h3>
+
+<p>There are significant relations between Self-efficacy and Literacy &amp; Litercy and Attitude.</p>
+
+<h3 id="toc_29"><span style="color:blue">Lesson Learned</span></h3>
+
+<blockquote>
+<p><span style="color:blue">Waste management knowledge (<strong>literacy</strong>) indeed plays a crucial role in the mix of self-believing one can be part of the environmental crusade.</span></p>
+</blockquote>
+
+<h3 id="toc_30">Publication</h3>
+
+<p><em>Sun, Q., Chien, S. Y., &amp; Hsiao, I. H. (2023, July). <a href="https://doi.org/10.1109/ICALT58122.2023.00028" target="_blank">Theory of Planned Behavior Modeled Educational Technology for Waste Management Learning.</a> In 2023 IEEE International Conference on Advanced Learning Technologies (ICALT) (pp. 74-78). IEEE.</em></p>
+
+<hr>
+
+<h2 id="toc_31"><a name="webapp"></a> Waste Genie: Web Application for Smart Waste Management &amp; Learning</h2>
+
+<p>Waste Genie is a web-based application that ensembles a suite of AI, AR &amp; Social technologies that we&#39;ve researched above. It provides users the most updated waste management content and support. Waste Genie is designed to be THE go-to place and tool to get well-informed for sustainability resources, eco-tips, waste sorting feedback, etc. to adapt to our forever-growing-complex and sacred environment.</p>
+
+<p><img src="img/quiz.png" width=180>  <img src="img/quiz-completed.png" width=180> <img src="img/WasteGenie_leaderboard.png" width=150> </p>
+
+<p>To test the app, try it here: https://era.sqmlab.com/</p>
+
+<h3 id="toc_32">Results</h3>
+
+<p><img src="img/usage.png" width=400> 
+<img src="img/hmm.png" width=400> </p>
+
+<p>More detail is forthcoming...</p>
+
+<h3 id="toc_33"><span style="color:blue">Lesson Learned</span></h3>
+
+<blockquote>
+<p><span style="color:blue"> Read &amp; interact first, publish and contribute later. 
+ </span></p>
+</blockquote>
+
+<h3 id="toc_34">Publication</h3>
+
+<p><em>Sun, Q., &amp; Hsiao, I. H. (2023, October). <a href="https://doi.org/10.1109/GHTC56179.2023.10354701" target="_blank">Waste Genie: Learning Environmental Sustainability from Waste Sorting and Interactive Feedback.</a> In 2023 IEEE Global Humanitarian Technology Conference (GHTC) (pp. 310-317). IEEE.</em></p>
+
+<p><em>Sun., Q. &amp; Hsiao., I-H. (2023)<a href="https://doi.org/10.1145/3586182.3616696" target="_blank"> Waste Genie: A Web-Based Educational Technology for Sustainable Waste Management</a>, In Poster Proceedings of the Annual ACM Symposium on User Interface Software and Technology (UIST 2023)</em></p>
+
+<p><em>Sun, Q., Hsiao, S.  (2024). Supporting Informal Sustainability Learning with AI-assisted Educational Technology. In: Tareq Ahram and Waldemar Karwowski (eds) Human Factors in Design, Engineering, and Computing. AHFE (2024) International Conference. AHFE Open Access, vol 159. AHFE International, USA.
+https://doi.org/10.54941/ahfe1005567</em></p>
+
+<p><em>Sun., Q. &amp; Hsiao., I-H. (2025) <a href="https://doi.org/10.1080/10494820.2025.2484644" target="_blank"> Waste Genie: Emerging Technology Support and Interactive Feedback to Enhance Sustainable Waste Management Learning</a>, Journal of Interactive Learning Environments, 1-18.</em></p>
+
+<h2 id="toc_35"><a name="gpt"></a> AI in Waste Genie</h2>
+
+<div><pre><code class="language-none">RQ1: How do we create meaningful sustainability learning content, and sustainably?
+RQ2: What are the alternative UI to interact with AI agent? (considering the waste mgt field is so immense, the vocabulary and pre-knowledge may be limmtied.)
+RQ3: How do we engineer a location-based legislation-guided LLM (llLLM) to assist educational content generation in WG? </code></pre></div>
+
+<p>We are experimenting and evaluating <em>Expert</em>, <em>Crowdsourcing</em> and <em>AI</em> approaches to create content, specifically, how LLM can be capitalized in creating sustainability learning content, and is the method sustainable?  </p>
+
+<p>We experimented the open source LLM applications, chatGPT 3.5 Turbo, meta&#39;s LLaMA2, etc, the results are either not correct or too generic, and most importantly, not location specific. The straighforward solution is to integrate all the legal documents (legislative regulations about waste) into the LLM, however, it also indicates a severe hulucination of the model.</p>
+
+<p><img src="img/llama2.png" width="200">
+<img src="img/chatGPT.png" width="200"></p>
+
+<p>We also experimented engineering Environmental Legislative-guided LLM to help extract relevant information. Please refer to our IEEE CAI&#39;25 &amp; ACM COMPASS&#39;25 papers.
+<img src="img/prompts.png">
+Environmental Legislative-guided LLM for Content generation and evaluation pipeline.</p>
+
+<h3 id="toc_36">Publication</h3>
+
+<p><em>Sun., Q., Chien., S-Y. &amp; Hsiao., I-H.(2024) <a href="https://drive.google.com/file/d/1NRjyKmSUasnrqWF_CcIq62eE" target="_blank">Learning Waste Management from Interactive Quizzes and Adaptive GPT-guided Feedback</a>, EDM workshop on Leveraging Large Language Models for Next Generation Educational Technologies, the 17th International Conference of Educational Data Mining.</em></p>
+
+<p><em>Sun., Q. &amp; Hsiao., I-H.(2024) <a href="https://dl.acm.org/doi/abs/10.1145/3677525.3678652" target="_blank">An AI-infused Educational Technology to Cultivate Self-directed Learning in Sustainable Waste Management</a>, GoodIT &#39;24: Proceedings of the 2024 International Conference on Information Technology for Social Good.</em></p>
+
+<p><em>Sun., Q. &amp; Hsiao., I-H.(2025) <a href="https://dl.acm.org/doi/pdf/10.1109/CAI64502.2025.00066" target="_blank">Engineering Legislative-guided LLM to Support Waste Management Learning</a>, IEEE CAI&#39;25.</em></p>
+
+<p><em>Sun, Q., Chien, S. Y., &amp; Hsiao, I. H. (2025, July). <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11194808">Learning Reduce &amp; Reuse Waste Management Practices with Human-AI Collaboration</a>. In 2025 IEEE International Conference on Advanced Learning Technologies (ICALT) (pp. 254-258). IEEE.</em></p>
+
+<p><em>Sun., Q. &amp; Hsiao., I-H.(2025) <a href="https://dl.acm.org/doi/pdf/10.1145/3715335.3735473" target="_blank">AI-infused Educational Technology for Continuous Waste Management
+Learning: an Environmental Legislative-guided LLM enhanced approach</a>, ACM SIGCAS&amp;SIGCHI COMPASS.</em></p>
+
+<p><em>Sun, Q., &amp; Hsiao, I. H. (2026). <a href="https://www.jstor.org/stable/48853596" target="_blank">Lessons learned from an AI-assisted educational technology for environmental sustainability and waste management</a>. Educational Technology &amp; Society, 29(1), 388-407.</em></p>
+
+<h1 id="toc_37"><a name="AI"></a> Sustainability Content Engineering</h1>
+
+<h3 id="toc_38">Crowdsourcing</h3>
+
+<p>Some memes are discovered in our user generated content. We later explore how AI can help generating engaging memes. Check our pubs. </p>
+
+<p><img src="img/WG_memes.png" width="40%"></p>
+
+<h3 id="toc_39">Visualization</h3>
+
+<p>We engineer methods to make sustainability content more digestible and accessible via visualization. </p>
+
+<p><em>Gunasekaran. M., &amp; Hsiao, I-H. (2026, April) Making Sustainability Content Digestible: Context-Aware AI-infused Visualizations Beyond Summarization. The 13th IEEE Conference on Technologies for Sustainability (SusTech) 2026</em></p>
+
+<h3 id="toc_40">Open sources</h3>
+
+<p>More detail is forthcoming...</p>
+
+<h2 id="toc_41">Human-AI Collaboration</h2>
+
+<p>We create an AI assistant that helps users express and develop ideas about sustainable practices and use a commentary interface to collaboratively generate Reduce or Reuse ideas.</p>
+
+<p><img src="img/thread-full.png" width="40%"></p>
+
+<h3 id="toc_42">Publication</h3>
+
+<p><em>Sun., Q. &amp; Hsiao., I-H.(2025) <a href="https://doi.org/10.1145/3708319.3733688" target="_blank">Human-AI Collaborated Ideation for Learning Reduce &amp; Reuse Waste</a>, ACM UMAP LBR. The 33rd ACM International Conference on
+User Modeling, Adaptation and Personalization. [<a href="https://webpages.scu.edu/ftp/ihsiao/Research/UMAP25_LBR_Hsiao.pdf" target="_blank">slide</a>]</em></p>
+
+<h2 id="toc_43">Generative AI</h2>
+
+<p>We experimented many methods and off-the-shelf LLMs to generate educational content for WG. No matter static or interactive posts in WG, we need massive amount of organized texts, engaging imagery, clear background, and most importantly, the meta data for the post (i.e. waste sorting labels, regulations, etc.) </p>
+
+<p>Couple studies are under way, i.e. the effects of GPT-feedback in learning. </p>
+
+<p>Stay tuned...</p>
+
+<h3 id="toc_44">Publication</h3>
+
+<p><em>Nickel, R., Hsiao, S.  (2024). <a href="https://doi.org/10.54941/ahfe1005579">Creative Collaborator: AI-facilitated UI for Creating Engaging and Insightful Memes</a>. In: Tareq Ahram and Waldemar Karwowski (eds) Human Factors in Design, Engineering, and Computing. AHFE (2024) International Conference. AHFE Open Access, vol 159. AHFE International, USA.
+<a href="https://doi.org/10.54941/ahfe1005579">https://doi.org/10.54941/ahfe1005579</a></em></p>
+
+<h2 id="toc_45"><a name="logo"></a>Waste Genie Logos</h2>
+
+<p>One of our talented SCU students, <a href="https://v3ceban.github.io/" " target="_blank">Vladimir Ceban</a>, designed Waste Genie logos. 
+We are very pleased and proud to announce some of designs here. <br></p>
+
+<p><img src="img/logoSquareGreenCircle.png"></p>
+
+<p><img src="img/logoWideWGBlueCircle.png"></p>
+
+<p><img src="img/logoWideBlackCircle.png"></p>
+
+<h2 id="toc_46"><a name="game"></a> Gamification in informal learning</h2>
+
+<p><img src="img/quiz-assist.png" width="40%"></p>
+
+<h3 id="toc_47"><span style="color:blue">Lesson Learned</span></h3>
+
+<p><span style="color:blue">Concentrated mini-practices with AI-infused feedback (GPT-3.5) efficiently improved users&#39; waste sorting accuracy. vs. practice on their own. </span></p>
+
+<p><span style="color:blue"><b>Landfill</b> category is the main category that users struggle to sort!</span></p>
+
+<p>*<i>We have more games on deck, stay tuned...</i></p>
+
+<h3 id="toc_48">Publication</h3>
+
+<p><em>Sun, Q., &amp; Hsiao, I. H. (2024, October). <a href="https://link.springer.com/chapter/10.1007/978-3-031-74138-8_11" target="_blank">Serious Practices for Interactive Waste Sorting Mini-game</a>. In Joint International Conference on Serious Games (pp. 134-141). Cham: Springer Nature Switzerland.</em></p>
+
+<hr>
+
+<h2 id="toc_49"><img src="img/MyEcoPal_logo.png" width="5%"><a name="myecopal"></a> MyEcoPal</h2>
+
+<p>As our team explore more and more about EdTech to support sustainability, we face one of the critical challenge, which is the &quot;<em>gap</em>&quot; between <em>knowing and doing</em>. So we begin to research methods to support sustainable actions. One of the assumptions that we tested is CO2 is colorless, odorless, tasteless. <em>Will you care more if you can see it?</em> If we associate it with the metrics you know (such as &quot;<strong>money</strong>&quot;), <em>will you care more?</em></p>
+
+<p><img src="img/CHI26_teaser.png" width="80%"></p>
+
+<h3 id="toc_50"><a href="https://youtu.be/YS-Q7yWFQGM?si=UOFJsCe9pfPMjccj" target="_blank">MyEcoPal short video intro</a></h3>
+
+<ul>
+<li><p>MyEcoPal is also featured in the <a href="https://scu-sustech.vercel.app/" target="_blank"><strong>Greenovation Lab: AI for Sustainability</strong></a>. </p></li>
+<li><p>Two media articles about our project are also mentioning us. One is featured on SCU&#39;s homepage: <a href="https://www.scu.edu/news-and-events/feature-stories/2025-feature-stories/stories/a-team-of-computer-scientists-build-an-ai-powered-app-that-encourages-eco-friendly-living.html">A team of computer scientists build an AI-powered app that encourages eco-friendly living</a>; the other one is an interview by a third party organization, Waste Dive (<a href="https://www.wastedive.com/news/ai-recycling-education-oscar-sort-professor-green-los-angeles/756106/">Cities and facility operators turn to AI for recycling education revamp</a>).</p></li>
+<li><p>During our exploration of <em>bridging the gap between knowing and doing</em> in MyEcoPal, we also learn many approaches to faciliate and to motivate the positive behavior change, habit building, and complex decision making. Stay tuned...</p></li>
+</ul>
+
+<h3 id="toc_51">Publication</h3>
+
+<p><em>Sun, Q., Hsiao, I. H. &amp; Chien, S-Y. (2026, April). <a href="https://hci-terra.github.io/assets/submissions/CHI_2026_HCI_TERRA_Personalized_Sustainability.pdf" target="_blank">Personalized Sustainability Assistant: AI-infused Context Engineering to Connect Sustainability Understanding to Sustainable Actions.</a>. In CHI&#39;26 Workshop, <a href="https://hci-terra.github.io/" target="_blank">HCI-TERRA: HCI Towards EnviRonmentally Responsible AI. </a></em></p>
+
+<h2 id="toc_52"><a name="contacts"></a>Contacts</h2>
+
+<p>Qiming Sun &amp; <a href="https://webpages.scu.edu/ftp/ihsiao/">Dr. Sharon Hsiao</a>
+<br><br>
+<img src="img/uist23.png" width="40%"><br>
+We presented WG work in 2023 ACM UIST conf. </p>
+
+
+
+
+</body>
+
+</html>
